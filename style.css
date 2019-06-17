@@ -1,0 +1,14 @@
+body{
+	background-color: #010101;
+	color: #010101;
+	font-family: Raleway;
+	font-weight: normal;
+}
+
+h3{
+	font-weight: normal;
+}
+
+.visible{
+	color: #F0ECE2;
+}
