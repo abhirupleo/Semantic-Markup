@@ -12,3 +12,62 @@ h3{
 .visible{
 	color: #F0ECE2;
 }
+
+.container{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.container > *{
+	flex:1 100%;
+	padding: 5px;
+}
+
+@media all and (min-width: 800px) {
+  /* We tell both sidebars to share a row */
+  .item { flex: 1; }
+}
+
+.toggle{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.toggle>input[type="checkbox"]{
+	opacity: 0;
+}
+
+.toggle-btn{
+	border-radius: 40px;
+	position: relative;
+	width: 80px;
+	height: 40px;
+	background-color: #fff;
+	overflow:hidden;
+	cursor: pointer;
+}
+
+.toggle-btn:before{
+	transition: all 150ms ease-out;
+	border-radius: 36px;
+	content:'';
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	left:2px;
+	top:2px;
+	background-color: #010101;
+	overflow:hidden;
+	cursor: pointer;
+}
+
+input[type=checkbox]:checked + .toggle-btn:before{
+	transition: all 150ms ease-out;
+	left:42px;
+}
